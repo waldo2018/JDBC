@@ -1,4 +1,4 @@
-package com.java.test;
+package com.java.test.connect;
 
 import java.io.InputStream;
 import java.sql.Connection;
