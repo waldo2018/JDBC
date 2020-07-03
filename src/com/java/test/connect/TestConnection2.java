@@ -1,4 +1,4 @@
-package com.java.test;
+package com.java.test.connect;
 
 import java.sql.Connection;
 import java.util.Properties;
