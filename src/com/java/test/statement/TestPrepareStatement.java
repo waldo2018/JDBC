@@ -10,19 +10,50 @@ import com.java.Utils.JDBCUtils;
 
 public class TestPrepareStatement {
 	
+	/**
+	 * 用来测试对数据库的更新操作
+	 */
 	@Test
-	public void testPreparedStatement() {
+	public void testUpdate() {
 			
-		String name = "CC";
+		String user = "CC";
 		String password = "1234";
 		
 		String sql = "update user_table set password=? where user=?";
 		
-		update(sql,password,name);
+		update(sql,password,user);
 		
 	}
 	/**
-	 * 通用的增刪改操作
+	 * 用来测试对数据库的插入操作
+	 */
+	@Test
+	public void testInsert() {
+		
+		String user = "whc";
+		String password = "128680";
+		String balance = "5000";
+		
+		String sql = "INSERT INTO user_table (user,password,balance) VALUES(?,?,?)";
+		
+		update(sql,user,password,balance);
+		
+	}
+	/**
+	 * 用来测试数据库的删除操作
+	 */
+	@Test
+	public void testDel() {
+		
+		String user = "whc";
+		String password = "128680";
+		
+		String sql = "delete from user_table where user=? and password=?";
+		
+		update(sql,user,password);
+	}
+	/**
+	 * 通用的增，刪，改操作
 	 * @param sql 帶有佔位符的執行語句
 	 * @param args 參數
 	 */

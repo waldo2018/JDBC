@@ -20,10 +20,10 @@ public class TestConnection4 {
 			String url = "jdbc:mysql://192.168.1.105/mysql";
 			String user = "root";
 			String password = "128680";
-			String driverName = "com.mysql.cj.jdbc.Driver";
+			//String driverName = "com.mysql.cj.jdbc.Driver";
 			
 			// 获取Driver的实例化
-			Class.forName(driverName);
+			//Class.forName(driverName);
 			//Driver driver = (Driver)clazz.newInstance();
 			
 			// 获取数据连接

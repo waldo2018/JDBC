@@ -62,13 +62,13 @@ public class JDBCUtils {
 	 * @param rs ResultSet
 	 * @throws SQLException
 	 */
-	public static void closeResource(Connection conn , Statement st , ResultSet rs) throws SQLException {
+	public static void closeResource(Connection conn , PreparedStatement pstmt , ResultSet rs) throws SQLException {
 		
 		if (conn != null) {			
 			conn.close();
 		}
-		if (st != null) {
-			st.close();
+		if (pstmt != null) {
+			pstmt.close();
 		}
 		if (rs != null) {
 			rs.close();
