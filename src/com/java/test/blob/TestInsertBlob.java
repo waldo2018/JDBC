@@ -44,7 +44,7 @@ public class TestInsertBlob {
 			pstmt.setDate(3, new Date(new java.util.Date().getTime()));
 			
 			// 操作Blob類型的變量
-			FileInputStream fs = new FileInputStream("WebContent\\WEB-INF\\images");
+			FileInputStream fs = new FileInputStream("WebContent\\WEB-INF\\images\\IMG_0868.JPG");
 			pstmt.setBlob(4, fs);
 			
 			// 執行操作
