@@ -7,8 +7,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Properties;
+
+import javax.sql.DataSource;
+
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 
 public class JDBCUtils {
@@ -73,5 +76,12 @@ public class JDBCUtils {
 		if (rs != null) {
 			rs.close();
 		}
-	}	
+	}
+	
+	public static Connection getConnection2() throws SQLException {
+		
+		DataSource ds = new ComboPooledDataSource("c3p0-config");
+		
+		return ds.getConnection();
+	}
 }
